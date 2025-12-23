@@ -226,7 +226,7 @@ function CrustyHub:CreateWindow(options)
         BackgroundColor3 = THEME.Background,
         BackgroundTransparency = 0.15,
         BorderSizePixel = 0,
-        Text = "Show Crusty Hub",
+        Text = "Show Fent hub sab",
         Font = Enum.Font.GothamMedium,
         TextSize = 13,
         TextColor3 = THEME.Text,
