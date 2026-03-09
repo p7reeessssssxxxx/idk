@@ -19,16 +19,15 @@ local DEFAULT_CONFIG = [[return {
 
 local _cfg = {}
 if makefolder and writefile and readfile and isfile and isfolder then
-    -- create folder on first run
     if not isfolder(CONFIG_FOLDER) then
         makefolder(CONFIG_FOLDER)
     end
-    -- create config file on first run
+    
     if not isfile(CONFIG_FILE) then
         writefile(CONFIG_FILE, DEFAULT_CONFIG)
         print("[FakePurchase] Created config at " .. CONFIG_FILE)
     end
-    -- load config
+
     local ok, result = pcall(function()
         return loadstring(readfile(CONFIG_FILE))()
     end)
